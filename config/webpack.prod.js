@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
-
+process.env.REACT_APP_ROUTER_BASE = 'swachh'
 module.exports = {
 	mode: "production",
 	devtool: "nosource-source-map",
@@ -12,7 +12,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, '../dist'),
 		filename: '[name].[contentHash].js',
-		publicPath: '/'
+		publicPath: './'
 	},
 	optimization: {
 		minimizer: [

@@ -11,7 +11,9 @@ global.log = (...msgs) => {
 
 const app = (
 	<Provider store={store}>
-		<BrowserRouter>
+		< BrowserRouter basename = {
+			process.env.REACT_APP_ROUTER_BASE || '/swachh'
+		} >
 			<App />
 		</BrowserRouter>
 	</Provider>
